@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Setup React project",
+      "description": "Initialize project with all dependencies",
+      "status": "done",
+      "priority": "high",
+      "createdAt": "2025-01-27T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Learn Zustand",
+      "description": "Study state management with Zustand",
+      "status": "in-progress",
+      "priority": "medium",
+      "createdAt": "2025-01-27T11:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Build Task Manager",
+      "description": "Create a complete task management app",
+      "status": "todo",
+      "priority": "high",
+      "createdAt": "2025-01-27T12:00:00Z"
+    }
+  ],
+  "auth": {
+    "user": {
+      "id": 1,
+      "email": "user@example.com",
+      "name": "John Doe"
+    },
+    "token": "fake-jwt-token-12345"
+  }
+}

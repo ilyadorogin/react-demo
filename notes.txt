@@ -1,77 +1,111 @@
-ТЗ
+ТЗ: Task Manager (упрощенная версия)
+Цель: Изучить React за 1-2 дня на практическом проекте
+Технический стек
+
+React 19 + TypeScript + Vite
+React Router (базовый роутинг)
+Zustand (1-2 store)
+React Hook Form + Zod
+Shadcn/ui + Tailwind
+JSON Server для fake API
+
+Функционал (минимум)
+День 1: Основы
+
+Auth (mock):
+
+Простая форма логина
+Zustand store для user
+Protected route
 
 
-Проект: ToDo Manager с категориями и синхронизацией
-Цель
-Сделать приложение для управления задачами, которое затронет:
+Tasks CRUD:
 
-работу с состоянием (локальным и глобальным)
+Список задач
+Добавить/редактировать/удалить
+Поля: title, description, status, priority
 
-хуки (встроенные + кастомные)
 
-контекст и менеджеры состояния (Zustand/Context)
+Базовый UI:
 
-взаимодействие с API (CRUD + optimistic updates)
+Header с logout
+Sidebar навигация
+Task list компонент
 
-маршрутизацию (React Router)
 
-мемоизацию и оптимизацию рендеринга
 
-асинхронные паттерны (React Query / SWR)
+День 2: Продвинутое
 
-формочки (react-hook-form)
+Фильтрация:
 
-обработку ошибок и Edge cases
+Поиск по названию
+Фильтр по статусу
+Debounced search
 
-Server Components (если решишь делать на Next.js)
 
-Функционал
-1. Задачи
-Создание, редактирование, удаление задач.
+State management:
 
-Поля: title, description, dueDate, priority, status (done/pending).
+React Query для tasks API
+Оптимистичные обновления
+Error handling
 
-Фильтрация/сортировка (по дате, приоритету).
 
-Чекбокс для отметки выполненных задач.
+Полировка:
 
-2. Категории
-Категории с CRUD (например, Work / Personal).
+Loading states
+Toast уведомления
+Dark/light theme
 
-Задачи привязываются к категории.
 
-Страница категории показывает только её задачи.
 
-3. Авторизация (фейковая)
-Простая форма логина (email + пароль).
+Структура (упрощенная)
+src/
+├── components/ui/    # 3-4 shadcn компонента
+├── features/
+│   ├── auth/        # Login + store
+│   └── tasks/       # CRUD + список
+├── hooks/           # 2-3 custom hooks
+├── lib/             # API client
+├── stores/          # authStore + settingsStore
+└── pages/           # 3 страницы
+Маршруты (минимум)
+/login     # Форма входа
+/tasks     # Список задач (главная)
+/tasks/:id # Редактирование задачи
+API (JSON Server)
+json{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Learn React",
+      "description": "Study hooks and state management",
+      "status": "todo|in-progress|done",
+      "priority": "low|medium|high",
+      "createdAt": "2025-01-27"
+    }
+  ],
+  "user": {
+    "id": 1,
+    "email": "user@example.com",
+    "name": "John Doe"
+  }
+}
+Критерии выполнения
 
-Хранение токена в localStorage.
+✅ Работает auth (mock)
+✅ CRUD задач через API
+✅ Поиск + фильтрация
+✅ Responsive UI
+✅ Error handling
+✅ 1 кастомный хук
+✅ TypeScript везде
 
-После логина показывается список задач.
+Что изучим:
 
-Выход из системы (logout).
-
-4. Синхронизация
-Подключение к фейковому API (JSON-server или mock API).
-
-React Query для запросов, кэширования и optimistic updates.
-
-5. Глобальное состояние
-Глобальное состояние для пользователя и настроек (Zustand или Context).
-
-Локальное состояние — через useState/useReducer.
-
-6. Маршруты
-/login — страница входа
-
-/tasks — все задачи
-
-/tasks/:id — детальная страница задачи
-
-/categories — список категорий
-
-7. UI
-Использовать готовую UI-библиотеку (например, Shadcn UI или Material UI).
-
-Минимум кастомных стилей, упор на логику.
-
+React hooks (useState, useEffect)
+Zustand для состояния
+React Query для API
+React Router
+Forms с validation
+Custom hooks
+TypeScript + React
