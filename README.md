@@ -1,2 +1,2 @@
-# rect-demo
+# react-demo
 Playing with react here
