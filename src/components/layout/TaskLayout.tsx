@@ -1,5 +1,13 @@
+import Breadcrumbs from '../ui/Breadcrumbs.tsx'
+import { Outlet } from 'react-router-dom'
+
 const TaskLayout = () => {
-  return <div>TaskLayout</div>
+  return (
+    <>
+      <Breadcrumbs />
+      <Outlet />
+    </>
+  )
 }
 
 export default TaskLayout
